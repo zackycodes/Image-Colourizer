@@ -26,11 +26,10 @@ Framework: PyTorch
 ## 🚀 Usage
 1. Training
 The training loop runs for 100 epochs, optimizing the model to minimize the difference between the predicted colorization and the ground truth.  
+The model is automatically saved after training
+torch.save(model.state_dict(), "unet_colorization.pth")
 
-Python
-# The model is automatically saved after training
-torch.save(model.state_dict(), "unet_colorization.pth")[cite: 2]
-2. Inference & Visualization
+3. Inference & Visualization
 The script includes a testing suite that utilizes matplotlib to display a side-by-side comparison of:  
 
 * Grayscale Input: The single-channel source image.  
